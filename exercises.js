@@ -237,7 +237,19 @@ printOrders(arrayOfObjects);
         Invoke your function and pass in your object, store the result to a variable named sumObjResult and use `console.log` 
         to inspect your results.
 */
+var sumObj = { 
+  a: 3, 
+  b: 12, 
+  result: undefined
+};
 
+function objectAddition(adding) {
+  adding.result = adding.a + adding.b;
+  return adding.result;
+}
+
+var sumObjResult = objectAddition(sumObj);
+console.log(sumObjResult);
 
 /*
 9. Print sum function and add as new key-value
