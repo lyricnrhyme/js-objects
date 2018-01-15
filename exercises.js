@@ -268,6 +268,27 @@ console.log(sumObjResult);
         **create more** objects and invoke your function multiple times.
  */
 
+function printObj(obj) {
+  obj.output = obj.a + " + " + obj.b + " = " + obj.result;
+  return obj.output;
+}
+console.log(printObj(sumObj));
+
+var sumObjA = { 
+  a: 4, 
+  b: 16, 
+  result: undefined
+};
+var sumObjResultA = objectAddition(sumObjA);
+console.log(printObj(sumObjA));
+
+var sumObjB = { 
+  a: 12, 
+  b: 24, 
+  result: undefined
+};
+var sumObjResultB = objectAddition(sumObjB);
+console.log(printObj(sumObjB));
 
 /*
 10. Putting stuff in `plainBox`
