@@ -310,8 +310,6 @@ function putInPlainBox(obj) {
 putInPlainBox(plainBox.contents);
 console.log(plainBox);
 
-
-
 //console.log (Math.floor((Math.random() * 20))); Testing random number generator
 
 
@@ -325,7 +323,15 @@ console.log(plainBox);
 
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
-
+function detectingTranmission(obj) {
+  if (obj === true) {
+    return "Transmission!";
+  } else {
+    return "No transmission...";
+  }
+}
+var isAutomaticTransmission = detectingTranmission(stockCar.automaticTransmission);
+console.log (isAutomaticTransmission);
 
 /*
 12.  Who's driving this thing?!
@@ -338,6 +344,7 @@ console.log(plainBox);
      Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect 
       your results. Consider using `plainPerson` as your driver.
  */
+
 
 
 /*
