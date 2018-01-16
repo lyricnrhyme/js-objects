@@ -299,6 +299,20 @@ console.log(printObj(sumObjB));
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named 
         plainBoxResult and use `console.log` to inspect your results.
  */
+function putInPlainBox(obj) {
+  for (var i = 0; i < 10; i++) {
+    plainBox.contents[i] = Math.floor((Math.random() * 20));
+    //plainBox.contents[i] = i; contents: [0,1,2,3,4,5,6,7,8,9]
+    //obj = Math.floor((Math.random() *20));
+  }
+  return obj;
+}
+putInPlainBox(plainBox.contents);
+console.log(plainBox);
+
+
+
+//console.log (Math.floor((Math.random() * 20))); Testing random number generator
 
 
 /*
