@@ -220,6 +220,7 @@ function printOrders(orders) {
     console.log ("id: ", orders[i].id);
     console.log ("date: ", orders[i].date);
     console.log ("total: ", orders[i].total);
+    console.log ("=====");
   }
 }
 
@@ -240,7 +241,7 @@ printOrders(arrayOfObjects);
 var sumObj = { 
   a: 3, 
   b: 12, 
-  result: undefined
+  result: undefined 
 };
 
 function objectAddition(adding) {
@@ -271,6 +272,10 @@ console.log(sumObjResult);
 function printObj(obj) {
   obj.output = obj.a + " + " + obj.b + " = " + obj.result;
   return obj.output;
+  // OR return obj.a + " + " + obj.b + " = " + obj.result;
+  // to recall without using function again, store into new variable as so: var newStuff = printObj(sumObj)
+  // if you only put console.log, the data isn't necessarily stored so user wouldn't be able to access it at a later date if they forget
+
 }
 console.log(printObj(sumObj));
 
@@ -383,3 +388,16 @@ console.log(stockCar.driver);
         'Marifel, age 19, is riding dirty!'
         'Victor, age 19, is riding dirty!'
  */
+
+var passengerList = ["Jon", "Jason", "Tony", "Joe", "Jesse", "Nigel", "Kelli", "Marifel", "Victor"];
+
+var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
+
+function addPassengers (cars, names, ages) {
+  for (var prop in names) {
+    console.log(names[prop] + ", age " + ages[prop] + ", is riding dirty!");
+  }
+  return cars;
+}
+
+addPassengers ("Porsche", passengerList, passengerAges);
