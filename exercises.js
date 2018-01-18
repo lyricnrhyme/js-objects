@@ -393,11 +393,45 @@ var passengerList = ["Jon", "Jason", "Tony", "Joe", "Jesse", "Nigel", "Kelli", "
 
 var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
 
-function addPassengers (cars, names, ages) {
+/*function addPassengers (cars, names, ages) {
   for (var prop in names) {
     console.log(names[prop] + ", age " + ages[prop] + ", is riding dirty!");
   }
   return cars;
 }
 
-addPassengers ("Porsche", passengerList, passengerAges);
+addPassengers ("Porsche", passengerList, passengerAges);*/
+
+//Goal is to push objects into stockCar.passengers AND THEN print out 
+
+function addPassengers (cars, names, ages) {
+  for (var i = 0; i < names.length; i++) {
+    var newRiders = {};
+    buildPerson(newRiders, names[i], ages[i]);
+    cars.passengers.push(newRiders);
+    console.log(stockCar.passengers[i].name + ", age " + stockCar.passengers[i].age + ", is riding dirty!");
+  }
+  return cars;
+}
+addPassengers (stockCar, passengerList, passengerAges);
+
+
+//console.log(stockCar.passengers[0].name/* + ", age " + stockCar.passengers.age + " is riding dirty!"*/);
+
+/*var stockCar = {
+  model: "Ford",
+  year: 2012,
+  automaticTransmission: false,
+  driver: null,
+  passengers: []
+};
+console.log (stockCar);
+
+var plainPerson = {}; //want to add in name value and age value
+function buildPerson(person, nameString, age) {
+  person.name = nameString;
+  person.age = age;
+  return person;
+}*/
+
+//{ name: __, age: ___}
